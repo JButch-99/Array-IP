@@ -1,0 +1,13 @@
+Describe: processNumber();
+
+//Test One
+Test: "It should detect the number given."
+Code:
+const value = 25;
+processNumber();
+Expected Result: 25;
+
+// Test Two
+Test: It should return null when the value is equal or less than 0."
+Code:
+const value = 0;

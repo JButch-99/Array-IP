@@ -1,0 +1,8 @@
+Describe: processArray();
+
+// Test One
+Test: "It should convert the index of an array that is 3 to 'Won't you be my neighbor?'"
+Code:
+const array = "[3]"
+processArray(array);
+Expected Output: "Won't you be my neighbor?"

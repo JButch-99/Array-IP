@@ -1,15 +1,44 @@
 Describe: processArray();
 
 // Test One
-Test: "It should convert the index of an array that is 3 to 'Won't you be my neighbor?'"
+Test: "It should convert the index of an array that is 3 to 'Beep'"
 Code:
-const array = [3];
+const array = [1];
 processArray(array);
-Expected Output: "Won't you be my neighbor?"
+Expected Output: "Beep!"
 
 // Test Two
 Test: "It should convert the index of an array that is 2 to 'Boop!'"
 Code:
 const array = [2];
 processArray(array);
-Expected Result: ["  Boop!"]
+Expected Result: ["Boop!"]
+
+// Test Three
+Test: "It should convert the index of an array that is 3 to 'Won't you be my neighbor?'"
+Code:
+const array = [3]
+processArray(array);
+Expected Result: ["Won't you be my neighbor?"];
+
+// Test Four
+Test: "It should convert a number with two digits, where the first digit's key number is a greater number between 1 and 3, compared to the second number's key number if any."
+Code: 
+const array = [10]
+processArray(array);
+Expected Result: ["Beep!"];
+
+// Test Five
+Test: "It should convert a number with two digits, where the second digit's key number is a greater number between 1 and 3, compared to the first digit."
+Code:
+const array = [23]
+processArray(array);
+Expected Result: ["Won't you be my neighbor?"];
+
+// Test Six
+Test: "It should make a number where both digits equals the same, and both numbers are key numbers between 1 and 3."
+Code:
+const array = [11]
+processArray(array);
+Expected Result: ["Beep!"];
+

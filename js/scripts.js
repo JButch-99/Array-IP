@@ -1,38 +1,53 @@
 // Business Logic
 
 function validNumberToArray(value) {
+  let numberArray = [];
   if (value <= 0 || typeof value !== "number" || value === '') {
     return null;
   } 
 
-  let valueString = value.toString().split('');
-
-  return valueString;
+  for (let i = 0; i <= value; i++) {
+    numberArray.push(i);
+  }
+  return numberArray;
 }
 
 function processArray(array) {
-  let newArray = [];
+  console.log(array);
+  for (let i = 0; i <= array.length; i++) {
+    if (array[i] >= 10) {
+      const splitArrayIndex = array[i].toString().split('');
+      const numA = parseInt(splitArrayIndex[0]);
+      const numB = parseInt(splitArrayIndex[1]);
+      const setOfNumbers = [1, 2, 3];
+      
+      for (let number = 0; number < setOfNumbers.length; number++) {
+        const targetNumber = parseInt(setOfNumbers[number]);
+        if (numA === targetNumber && numB !== targetNumber) {
+          array[i] = numA;
+        } else if (numB === targetNumber && numA !== targetNumber) {
+          array[i] = numB;
+        } else if (numA === targetNumber && numB === targetNumber) {
+          array[i] = numA;
+        }
+      }
+    } 
 
-  for (let i = 0; i < array.length; i++) {
-    if (parseInt(array[i]) === 1) {
+    if (array[i] === 1) {
       array[i] = "Beep!";
-      newArray.push(array[i]);
-    } else if (parseInt(array[i]) === 2) {
+    } else if (array[i] === 2) {
       array[i] = "Boop!";
-      newArray.push(array[i]);
-    } else if (parseInt(array[i]) === 3) {
+    } else if (array[i] === 3) {
       array[i] = "Won't you be my neighbor?";
-      newArray.push(array[i]);
     }
   }
-
-  console.log(newArray);
-  return newArray;
+  console.log(array);
+  return array;
 }
 
 // UI Logic
 function handleSubmission() {
-  const numberString = 13254;
+  const numberString = 15;
 
   // Business Logic
   const numArray = validNumberToArray(numberString);

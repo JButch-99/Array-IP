@@ -46,8 +46,13 @@ function processArray(array) {
 }
 
 // UI Logic
+
+function imprintArray() {
+
+} 
+
 function handleSubmission() {
-  const numberString = 15;
+  const numberString = 13;
 
   // Business Logic
   const numArray = validNumberToArray(numberString);

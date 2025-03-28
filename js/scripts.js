@@ -6,14 +6,13 @@ function validNumberToArray(value) {
     return null;
   } 
 
-  for (let i = 0; i <= value; i++) {
+  for (let i = 1  ; i <= value; i++) {
     numberArray.push(i);
   }
   return numberArray;
 }
 
 function processArray(array) {
-  console.log(array);
   for (let i = 0; i <= array.length; i++) {
     if (array[i] >= 10) {
       const splitArrayIndex = array[i].toString().split('');
@@ -41,26 +40,37 @@ function processArray(array) {
       array[i] = "Won't you be my neighbor?";
     }
   }
-  console.log(array);
+  
   return array;
 }
 
 // UI Logic
 
-function imprintArray() {
+function createElementsAndAppend(array) {
+  const arrayToString = array.join(', ');
+  let whiteboardPanel = document.getElementById("whiteboard");
+  let p = document.createElement("p");
 
-} 
+  p.append(arrayToString);
 
-function handleSubmission() {
-  const numberString = 13;
+  whiteboardPanel.innerHTML = null;
+
+  whiteboardPanel.append(p);
+}
+
+function handleSubmission(event) {
+  event.preventDefault();
+  const numberString = parseInt(document.getElementById("numberBox").value);
 
   // Business Logic
   const numArray = validNumberToArray(numberString);
+  const newProcessedArray = processArray(numArray);
   processArray(numArray);
-
   // UI Logic
+
+  createElementsAndAppend(newProcessedArray);
 }
 
 window.addEventListener("load", function(){
-  handleSubmission();
+  document.querySelector("form#numberInputBox").addEventListener("submit", handleSubmission);
 });

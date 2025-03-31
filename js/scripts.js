@@ -13,6 +13,7 @@ function validNumberToArray(value) {
 }
 
 function processArray(array) {
+  let processedArray = []; 
   for (let i = 0; i <= array.length; i++) {
     if (array[i] >= 10) {
       const splitArrayIndex = array[i].toString().split('');
@@ -30,8 +31,9 @@ function processArray(array) {
           array[i] = numA;
         }
       }
-    } 
 
+    } 
+    
     if (array[i] === 1) {
       array[i] = "Beep!";
     } else if (array[i] === 2) {
@@ -39,9 +41,10 @@ function processArray(array) {
     } else if (array[i] === 3) {
       array[i] = "Won't you be my neighbor?";
     }
+    
+    processedArray.push(array[i]);
   }
-  
-  return array;
+  return processedArray;
 }
 
 // UI Logic

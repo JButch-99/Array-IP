@@ -1,0 +1,22 @@
+Describe: validNumberToArray();
+
+//Test One
+Test: "It should detect the number given."
+Code:
+const value = 25;
+validNumberToArray(value);
+Expected Result: 25;
+
+// Test Two
+Test: It should return null when the value is equal or less than 0."
+Code:
+const value = 0;
+validNumberToArray(value);
+Expected Result: null;
+
+// Test Three
+Test: It should not return anything, if form is left empty."
+Code:
+const value = 
+validNumberToArray(value);
+Expected Result: No results

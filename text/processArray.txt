@@ -36,7 +36,7 @@ processArray(array);
 Expected Result: ["Won't you be my neighbor?"];
 
 // Test Six
-Test: "It should make a number where both digits equals the same, and both numbers are key numbers between 1 and 3."
+Test: "It should match a number where both digits equals the same, and both numbers are key numbers between 1 and 3."
 Code:
 const array = [11]
 processArray(array);

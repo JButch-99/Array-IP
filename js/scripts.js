@@ -50,7 +50,7 @@ function processArray(array) {
 // UI Logic
 
 function createElementsAndAppend(array) {
-  const arrayToString = array.join(', ');
+  const arrayToString = array.join(' ');
   let whiteboardPanel = document.getElementById("whiteboard");
   let p = document.createElement("p");
 

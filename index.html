@@ -10,12 +10,11 @@
     <div class="grid-body">
       <div class="div-1">
         <h1>Mr. Roboger's Neighborhood</h1>
+        <p>By: JButch-99</p>
       </div>
 
       <div class="div-2">
-        <div class="title-box">
-          <h1>How does this work?</h1>
-        </div>
+        <h1 class="title-box">How does this work?</h1>
         <div class="text-scroll">
           <p>
             Welcome to Mr. Roboger's Funhouse! This is a place where you can see him turn your numbers into words! To explain it, here is the fun and helpful guide!
@@ -30,34 +29,46 @@
             Numbers are sorted by if they contain one of the above magic numbers! For example, 12 becomes "Boop!", whereas 10 becomes "Beep". It will not change numbers whose number doesn't contain one of our three magic numbers!
           </p>
         </div>
-      </div>
-
-      <div class="div-3">
-        <div class="title-box">
-          <h1>Contact Info</h1>
+        <div class="img-scroll">
+          <h1 class="title-box">The Rodger Gallery</h1>
+          <img src="https://media.gettyimages.com/id/515113250/photo/fred-rogers-of-mister-rogers-neighborhood-holds-henrietta-pussycat-and-x-the-owl-during-an.jpg?s=612x612&w=gi&k=20&c=IHrOxHRVDwXAm6fAZIUwxbwq6jD0TnCKLBqS1gHxYKU=" class="image">
+          <a href="https://www.youtube.com/watch?v=JMuJcrolgUA"><img src="https://media.npr.org/assets/img/2014/05/24/mr-rogers_custom-c56bd80c70610f28e894aa1610263c398a1cc021.jpg?s=1100&c=50&f=jpeg" class="image"></a>
+          <a href="https://www.youtube.com/watch?v=kFVPkn37iFM"><img src="https://www.looper.com/img/gallery/what-the-last-episode-of-mister-rogers-neighborhood-was-like/mister-rogers-never-acknowledges-that-its-the-final-episode-1634968687.jpg" class="image"></a>
+          <img src="https://thumbs.dreamstime.com/b/mr-rogers-street-art-fred-mcfeely-hosted-childrens-television-program-us-to-56365190.jpg" class="image">
         </div>
       </div>
 
+      <div class="div-3">
+        <h1 class="title-box">Additional Info</h1>
+        <div class="contact-box">
+          <ul class="info">
+            <li>GitHub Repository: <a href="https://github.com/JButch-99/Array-IP">Array-IP</a></li>
+            <li>License: <a href="license.txt">Click Here</a></li>
+            <li>Linkedin: <a href="#">Click Here</a></li>
+          </ul>
+          <img src="https://img.freepik.com/premium-vector/text-box_981168-1475.jpg" class="info-img">
+          <a href="https://github.com/JButch-99"><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" class="info-img"></a>
+        </div>
+      </div>
+      
       <div class="div-4">
         <h1 class="title-div4">Enter your number!</h1>
         <div class="row">
-          <div class="col-md-6">
-            <div class="input-box">
-              <form id="numberInputBox">
-                <label for="numberBox"></label>
-                <input id="numberBox" type="number" placeholder="Submit your number">
-                <button type="submit">Submit</button>
-              </form>
-            </div>
+          <div class="input-field">
+            <form id="numberInputBox">
+              <label for="numberBox"></label>
+              <input id="numberBox" type="number"placeholder="Submit your number" max="100">
+              <button type="submit">Submit</button>
+            </form>
           </div>
-          <div class="col-md-6">
-            <div class="input-box">
+        </div>
+        <div class="row">
+          <div class="input-box">
               <h1>Mr.Roboger says...</h1>
               <div class="scroll" id="whiteboard">
 
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>

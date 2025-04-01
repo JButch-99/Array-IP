@@ -12,12 +12,18 @@ body {
 .div-1 {
   grid-area: 1/1/2/6;
   background-color:cadetblue;
-  margin: 50px;
-  padding: 25px;
+  margin: 80px;
+  padding: 12px;
   border: solid white 3px;
   text-align: center;
   border-radius: 125px;
 }
+
+.title-body {
+  color: yellow;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 
 .div-2 {
   grid-area: 2/1/6/2;
@@ -36,6 +42,15 @@ body {
 .div-3 {
   grid-area: 2/5/6/6;
   background-color: gray;
+}
+
+h3 {
+  font-size: 125%;
+  text-align: center;
+  margin-top: 15px;
+  border: solid black 3px;
+  background-color: red;
+  color: white;
 }
 
 .div-4 {
@@ -89,7 +104,7 @@ body {
   border: solid black 3px;
   background-color: silver;
   color: black;
-  font-size: 125%;
+  font-size: 150%;
 }
 
 .text-scroll {

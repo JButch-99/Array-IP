@@ -1,19 +1,25 @@
 // Business Logic
 
-function validNumberToArray(value) {
-  let numberArray = [];
-  if (value <= 0 || typeof value !== "number" || value === '') {
+function validateNumber(value) {
+  if (typeof value !== "number" || value === '') {
     return null;
   } 
+}
 
-  for (let i = 1  ; i <= value; i++) {
+function validNumberToArray(value, invalid) {
+  let numberArray = [];
+  
+  if (invalid) {
+    return null;
+  }
+
+  for (let i = 0; i <= value; i++) {
     numberArray.push(i);
   }
   return numberArray;
 }
 
-function processArray(array) {
-  let processedArray = []; 
+function processArray(array) { 
   for (let i = 0; i <= array.length; i++) {
     if (array[i] >= 10) {
       const splitArrayIndex = array[i].toString().split('');
@@ -34,14 +40,13 @@ function processArray(array) {
     } 
     
     if (array[i] === 1) {
-      array[i] = "Beep!";
+      array[i] = '"Beep!"';
     } else if (array[i] === 2) {
-      array[i] = "Boop!";
+      array[i] = '"Boop!"';
     } else if (array[i] === 3) {
-      array[i] = "Won't you be my neighbor?";
+      array[i] = '"' + "Won't you be my neighbor?" + '"';
     }
   }
-  
   return array;
 }
 
@@ -66,9 +71,10 @@ function handleSubmission(event) {
   // Business Logic
   const numArray = validNumberToArray(numberString);
   const newProcessedArray = processArray(numArray);
-  processArray(numArray);
+  const validNum = validateNumber(numberString)
+  processArray(numArray, validNum);
+  
   // UI Logic
-
   createElementsAndAppend(newProcessedArray);
 }
 

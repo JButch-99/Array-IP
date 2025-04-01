@@ -1,0 +1,9 @@
+Describe: validateNumber();
+
+// Test One
+Test: "It should not return anything, if form is left empty."
+Code:
+const value = 
+validateNumber(value);
+Expected Result: No results
+

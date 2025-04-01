@@ -8,15 +8,15 @@ validNumberToArray(value);
 Expected Result: 25;
 
 // Test Two
-Test: It should return null when the value is equal or less than 0."
+Test: "It should return 0 when the value is 0."
 Code:
 const value = 0;
 validNumberToArray(value);
-Expected Result: null;
+Expected Result: 0;
 
 // Test Three
-Test: It should not return anything, if form is left empty."
+Test: "It should create an array that counts up to the value."
 Code:
-const value = 
+const value = 5;
 validNumberToArray(value);
-Expected Result: No results
+Expected Result: [1, 2, 3, 4, 5];

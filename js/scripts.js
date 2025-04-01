@@ -31,7 +31,6 @@ function processArray(array) {
           array[i] = numA;
         }
       }
-
     } 
     
     if (array[i] === 1) {
@@ -41,22 +40,21 @@ function processArray(array) {
     } else if (array[i] === 3) {
       array[i] = "Won't you be my neighbor?";
     }
-    
-    processedArray.push(array[i]);
   }
-  return processedArray;
+  
+  return array;
 }
 
 // UI Logic
 
 function createElementsAndAppend(array) {
-  const arrayToString = array.join(' ');
+  
   let whiteboardPanel = document.getElementById("whiteboard");
   let p = document.createElement("p");
 
-  p.append(arrayToString);
+  p.textContent = array.join(', ');
 
-  whiteboardPanel.innerHTML = null;
+  whiteboardPanel.textContent = null;
 
   whiteboardPanel.append(p);
 }

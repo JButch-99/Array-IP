@@ -7,3 +7,9 @@ const value =
 validateNumber(value);
 Expected Result: No results
 
+// Test Two
+Test: "It will not return anything or encounter error if given anything other than an number."
+Code: 
+const value = "hello";
+validateNumber(value);
+Expected Result: no results;

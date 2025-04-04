@@ -32,7 +32,7 @@ _This is a project made with the fictional "Mr. Roboger" in mind. By entering a 
 
 * _3 = "Won't you be my neighbor?"_
 
-_To better explain how this works, it checks which number of these three is the most important. This is important for numbers that contain multiple digits. 11 will become "Beep!", whereas 13 becomes "Won't you be my neighbor?" due to 3 taking priority of the two. For simplicity sake, this program currently limits you to the numbers 0 to 100._
+_To better explain how this works, it checks which number of these three is the most important. This is important for numbers that contain multiple digits. 11 will become "Beep!", whereas 13 becomes "Won't you be my neighbor?" due to 3 taking priority of the two. For simplicity sake, this program currently limits you to the numbers 0 to 999._
 
 ## Setup / Installation Requirements
 

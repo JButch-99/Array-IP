@@ -1,50 +1,50 @@
 Describe: processArray();
 
 // Test One
-Test: "It should convert the index of an array that is 3 to 'Beep'"
+Test: "It should convert the index of an array whose highest priority number is 1, to 1."
 Code:
-const array = [1];
+const priorityNumbers = [1, 2, 3];
+const array = [11];
 processArray(array);
-Expected Output: "Beep!"
+Expected Output: [1];
 
 // Test Two
-Test: "It should convert the index of an array that is 2 to 'Boop!'"
+Test: "It should convert the index of an array whose highest priority number is 2, to 2."
 Code:
-const array = [2];
+const priorityNumbers = [1, 2, 3];
+const array = [21];
 processArray(array);
-Expected Result: ["Boop!"]
+Expected Result: [2];
 
 // Test Three
-Test: "It should convert the index of an array that is 3 to 'Won't you be my neighbor?'"
+Test: "It should convert the index of an array whose highest priority number is 3, to 3."
 Code:
-const array = [3]
+const priorityNumbers = [1, 2, 3];
+const array = [13]
 processArray(array);
-Expected Result: ["Won't you be my neighbor?"];
+Expected Result: [3];
 
 // Test Four
-Test: "It should convert a number with two digits, where the first digit's key number is a greater number between 1 and 3, compared to the second number's key number if any."
+Test: "In indexes with 2 or more digits, it should detect priority number and have the index become that number while ignoring non-priority numbers."
 Code: 
-const array = [10]
+const priorityNumbers = [1, 2, 3];
+const array = [18]
 processArray(array);
-Expected Result: ["Beep!"];
+Expected Result: [1];
 
 // Test Five
-Test: "It should convert a number with two digits, where the second digit's key number is a greater number between 1 and 3, compared to the first digit."
+Test: "In indexes with 2 or more digits and multiple priority numbers between 1 and 3, it should choose the greatest priority number among them."
 Code:
-const array = [23]
+const priorityNumbers = [1, 2, 3];
+const array = [123]
 processArray(array);
-Expected Result: ["Won't you be my neighbor?"];
+Expected Result: [3];
 
 // Test Six
-Test: "It should match a number where both digits equals the same, and both numbers are key numbers between 1 and 3."
+Test: "In index with 2 or more digits where all numbers are both priority numbers and the same value, the index will become a single number."
 Code:
+const priorityNumbers = [1, 2, 3];
 const array = [11]
 processArray(array);
-Expected Result: ["Beep!"];
+Expected Result: [1];
 
-// Test Seven
-Test: "It should return an array with both string and numbers."
-Code:
-const array = [5];
-processArray(array);
-Expected Result: [0, "Beep!", "Boop!" ,"Won't you be my neighbor?", 4, 5];

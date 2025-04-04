@@ -1,0 +1,29 @@
+Describe: convertArrayIndexToString();
+
+// Test One
+Test: "It should detect an array."
+Code:
+const modifiedArray = [0]
+convertArrayIndexToString(modifiedArray);
+Expected Result: [0];
+
+// Test Two
+Test: "If the index is a 1, it should convert it into "Beep!" in the array"
+Code:
+const modifiedArray = [0, 1];
+convertArrayIndexToString(modifiedArray);
+Expected Result: [0, "Beep!"];
+
+// Test Three
+Test: "If the index is a 2, it should convert it into "Boop" in the array."
+Code:
+const modifiedArray = [0, 1, 2];
+convertArrayIndexToString(modifiedArray);
+Expected Results: [0, "Beep!", "Boop!"];
+
+// Test Four
+Test: "If the index is a 3, it should convert it into "Won't you be my neighbor?" in the array."
+Code:
+const modifiedArray = [0, 1, 2, 3];
+convertArrayIndexToString(modifiedArray);
+Expected Results: [0, "Beep!", "Boop!", "Won't you be my neighbor?"];

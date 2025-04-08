@@ -30,6 +30,7 @@ function processArray(array) {
       const numC = parseInt(splitArrayIndex[2]);
       const numD = parseInt(splitArrayIndex[3]);
 
+
       let validNumA = priorityNumbers.includes(numA);
       let validNumB = priorityNumbers.includes(numB);
       let validNumC = priorityNumbers.includes(numC);
@@ -66,35 +67,45 @@ function processArray(array) {
       if (splitArrayIndex.length === 4) {
         if (validNumA && validNumB && validNumC && validNumD) {
           array[i] = Math.max(numA, numB, numC, numD);
-        } else if (validNumA && validNumB && validNumC) {
+        }
+
+        if (validNumA && validNumB && validNumC && !validNumD) {
           array[i] = Math.max(numA, numB, numC);
-        } else if (validNumB && validNumC && validNumD) {
+        } else if (!validNumA && validNumB && validNumC && validNumD) {
           array[i] = Math.max(numB, numC, numD);
-        } else if (validNumA, validNumC, validNumD) {
-          array[i] = Math.max(numA, numC, numD);
-        } else if (validNumA, validNumB, validNumD) {
+        } else if (validNumA && !validNumB && validNumC && validNumD) {
+          array[i] =  Math.max(numA, numC, numD);
+        } else if (validNumA && validNumB && !validNumC && validNumD) {
           array[i] = Math.max(numA, numB, numD);
-        } else if (validNumA, validNumB) {
+        }
+
+        if (validNumA && validNumB && !validNumC && !validNumD) {
           array[i] = Math.max(numA, numB);
-        } else if (validNumB, validNumC) {
-          array[i] = Math.max(numB, numC);
-        } else if (validNumC, validNumD) {
-          array[i] = Math.max(numC, numD);
-        } else if (validNumA, validNumD) {
-          array[i] = Math.max(numA, numD);
-        } else if (validNumA, validNumD) {
-          array[i] = Math.max(numA, numD);
-        } else if (validNumA, validNumC) {
+        } else if (validNumA && !validNumB && validNumC && !validNumD) {
           array[i] = Math.max(numA, numC);
-        } else if (validNumA) {
+        } else if (validNumA && !validNumB && !validNumC && validNumD) {
+          array[i] = Math.max(numA, numD); 
+        } else if (!validNumA && validNumB && validNumC && !validNumD) {
+          array[i] = Math.max(numB, numC);
+        } else if (!validNumA && validNumB && !validNumC && validNumD) {
+          array[i] = Math.max(numB, numD);
+        } else if (!validNumA && !validNumB && validNumC && validNumD) {
+          array[i] = Math.max(numC, numD);
+        }
+
+        if (validNumA && !validNumB && !validNumC && !validNumD) {
           array[i] = numA;
-        } else if (validNumB) {
+        } else if (!validNumA && validNumB && !validNumC && !validNumD) {
           array[i] = numB;
-        } else if (validNumC) {
+        } else if (!validNumA && !validNumB && validNumC && !validNumD) {
           array[i] = numC;
-        } else if (validNumD) {
+        } else if (!validNumA && !validNumB && !validNumC && validNumD) {
           array[i] = numD;
         }
+      }
+
+      if (splitArrayIndex.length === 5) {
+        array[i] = 1;
       }
     } 
   }

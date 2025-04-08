@@ -2,7 +2,7 @@
 
 #### By _**JButch-99**_
 
-#### _This is a project that will turn a number to an array counting up to that number. It will also convert numbers that start, or contain the numbers of 123 into words or sentences._
+#### _This is a project that will turn a number to an array counting up to that number. It will also convert numbers that contains the numbers of 1, 2, or 3 into words or sentences._
 
 ## Technologies Used
 

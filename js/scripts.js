@@ -30,7 +30,6 @@ function processArray(array) {
       const numC = parseInt(splitArrayIndex[2]);
       const numD = parseInt(splitArrayIndex[3]);
 
-
       let validNumA = priorityNumbers.includes(numA);
       let validNumB = priorityNumbers.includes(numB);
       let validNumC = priorityNumbers.includes(numC);
@@ -109,12 +108,11 @@ function processArray(array) {
       }
     } 
   }
-  console.log(array);
+  
   return array;
 }
 
 function convertArrayIndexToString(modifiedArray) {
-
   for (let i = 0; i <= modifiedArray.length; i++) {
     if (modifiedArray[i] === 1) {
       modifiedArray[i] = '"' + "Beep!" + '"';

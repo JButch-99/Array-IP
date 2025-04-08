@@ -1,7 +1,7 @@
 Describe: validateNumber();
 
 // Test One
-Test: "It should not return anything, if form is left empty."
+Test: "It should not return anything, if the form is left empty."
 Code:
 const value = 
 validateNumber(value);

@@ -32,7 +32,7 @@ _This is a project made with the fictional "Mr. Roboger" in mind. By entering a 
 
 * _3 = "Won't you be my neighbor?"_
 
-_To better explain how this works, it checks which number of these three is the most important. This is important for numbers that contain multiple digits. 11 will become "Beep!", whereas 13 becomes "Won't you be my neighbor?" due to 3 taking priority of the two. For simplicity sake, this program currently limits you to the numbers 0 to 10,000._
+_To better explain how this works, it checks which number of these three is the most important. This is important for numbers that contain multiple digits. 11 will become "Beep!", whereas 13 becomes "Won't you be my neighbor?" due to 3 taking priority of the two. For simplicity sake, this program currently limits you to the numbers 0 to 10,000 This will be expanded upon in the future._
 
 ## Setup / Installation Requirements
 
@@ -42,7 +42,11 @@ NOTE: If you are seeing this on an alternative source, please click on [this lin
 
 2. _After you click the button, click the "download ZIP" option at the very bottom of the menu that is now displayed._
 
-3. _Once downloaded, you'll be able to access the file on a code editor of your choice. You are also able to open the project in a browser of choice. To do this, open the newly downloaded file and open index.html on a browser of your choice._
+3. _Once downloaded, you will need to extract your files to gain access to them. This can be done by clicking the "extract all" button in your folder._
+
+4. _Once extracted, a pop up should open that is the folder of the newly extracted files. Click on the "index.html" in the file to access the program._
+
+5. _If you wish to modify the project, right clicking the "index.html" file will show you many options to choose from. One of which is above the share option, which is "open with". Clicking that will allow you to open the project into a code editor of choice, or even simply open the project into a different browser of your choosing."_
 
 ## Known Bugs
 

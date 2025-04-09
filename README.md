@@ -44,7 +44,7 @@ NOTE: If you are seeing this on an alternative source, please click on [this lin
 
 3. _Once downloaded, you will need to extract your files to gain access to them. This can be done by clicking the "extract all" button in your folder._
 
-4. _Once extracted, a pop up should open that is the folder of the newly extracted files. Click on the "index.html" in the file to access the program._
+4. _Once extracted, a pop up should open that is the folder of the newly extracted files. Click on the "index.html" in the file to access the program. If on Mac, you just need to double click the ZIP file to automatically unzip it._
 
 5. _If you wish to modify the project, right clicking the "index.html" file will show you many options to choose from. One of which is above the share option, which is "open with". Clicking that will allow you to open the project into a code editor of choice, or even simply open the project into a different browser of your choosing."_
 
